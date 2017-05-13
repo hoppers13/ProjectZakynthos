@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.Web", "Pro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artifacts", "artifacts", "{A27430E4-56DE-4FDF-8805-D473809B73CE}"
 	ProjectSection(SolutionItems) = preProject
+		collectionsSample.json = collectionsSample.json
 		sampleIteml.json = sampleIteml.json
 	EndProjectSection
 EndProject
