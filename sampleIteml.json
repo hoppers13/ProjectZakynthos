@@ -4,7 +4,7 @@
   "tags": "egeo, rodi",
   "acquired": "2017-04-12",
   "paid":  {"currency": "eur", "value": 180},
-  "scans": [ "recto.jpg", "verso.jpg", "certificato_colla.jpg" ],
+  "scans": [ "recto.jpg", "verso.jpg", "certificato_raybaudi.jpg" ],
   "catalogues": [
     {
       "name": "sassone",
