@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artifacts", "artifacts", "{A27430E4-56DE-4FDF-8805-D473809B73CE}"
 	ProjectSection(SolutionItems) = preProject
 		collectionsSample.json = collectionsSample.json
-		sampleIteml.json = sampleIteml.json
+		itemSample.json = itemSample.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.Persistence", "ProjectZakynthos.Persistence\ProjectZakynthos.Persistence.csproj", "{2E406C06-326B-41FF-8FB8-5BCA48BF7CF0}"
