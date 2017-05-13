@@ -1,0 +1,34 @@
+{
+  "id": "f9110985-d9a4-449e-b426-27b7970fb9a1",
+  "description": "1929, pittorica",
+  "tags": "egeo, rodi",
+  "acquired": "2017-04-12",
+  "paid":  {"currency": "eur", "value": 180},
+  "scans": [ "recto.jpg", "verso.jpg", "certificato_colla.jpg" ],
+  "catalogues": [
+    {
+      "name": "sassone",
+      "currency": "eur",
+      "estimates": [
+        {
+          "year": 2015,
+          "value": 1500
+        },
+        {
+          "year": 2017,
+          "value": 1750
+        }
+      ]
+    },
+    {
+      "name": "gibbons",
+      "currency": "gbp",
+      "estimates": [
+        {
+          "year": 2015,
+          "value": 300
+        }
+      ]
+    }
+  ]   
+}
