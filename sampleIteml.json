@@ -1,14 +1,21 @@
 {
   "id": "f9110985-d9a4-449e-b426-27b7970fb9a1",
-  "description": "1929, pittorica",
+  "description": "pittorica",
+  "year": 1929,
+  "condition": "MNH",
   "tags": "egeo, rodi",
-  "acquired": "2017-04-12",
-  "paid":  {"currency": "eur", "value": 180},
+  "acquired": {
+    "date": "2017-04-12",
+    "from": "Ghiglione",
+    "paid": 180,
+    "currency": "eur"
+  },
   "scans": [ "recto.jpg", "verso.jpg", "certificato_raybaudi.jpg" ],
   "catalogues": [
     {
       "name": "sassone",
       "currency": "eur",
+      "numeration": "3/11",
       "estimates": [
         {
           "year": 2015,
@@ -30,5 +37,16 @@
         }
       ]
     }
-  ]   
+  ],
+  "auctions": [
+    {
+      "auctioneer": "Ghiglione",
+      "date": "2017-04-01",
+      "currency":  "eur",
+      "startingBid": 150,
+      "sold": 150,
+      "surcharge": "20%",
+      "fee": 0
+    }
+  ]
 }
