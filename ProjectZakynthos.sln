@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artifacts", "artifacts", "{
 		sampleIteml.json = sampleIteml.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.Persistence", "ProjectZakynthos.Persistence\ProjectZakynthos.Persistence.csproj", "{2E406C06-326B-41FF-8FB8-5BCA48BF7CF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.Persistence.FileSystem", "ProjectZakynthos.Persistence.FileSystem\ProjectZakynthos.Persistence.FileSystem.csproj", "{14E0EAB2-3066-4C61-994D-57BCA63E2CD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{BB865226-A379-4061-88B7-5EF3DA192664}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB865226-A379-4061-88B7-5EF3DA192664}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB865226-A379-4061-88B7-5EF3DA192664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E406C06-326B-41FF-8FB8-5BCA48BF7CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E406C06-326B-41FF-8FB8-5BCA48BF7CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E406C06-326B-41FF-8FB8-5BCA48BF7CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E406C06-326B-41FF-8FB8-5BCA48BF7CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E0EAB2-3066-4C61-994D-57BCA63E2CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E0EAB2-3066-4C61-994D-57BCA63E2CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E0EAB2-3066-4C61-994D-57BCA63E2CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E0EAB2-3066-4C61-994D-57BCA63E2CD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
