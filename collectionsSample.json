@@ -1,15 +1,28 @@
 {
   "collections": [
     {
+      "id": 1,
       "title": "Isole Italiane del Mediterraneo",
       "items": [
-        "f9110985-d9a4-449e-b426-27b7970fb9a1"
+        {
+          "id": "f9110985-d9a4-449e-b426-27b7970fb9a1",
+          "year": 1929,
+          "description": "Egeo, pittorica",
+          "ordinal": 100
+        }
+
       ]
     },
     {
+      "id": 2,
       "title": "Colonie italiane - Egeo",
       "items": [
-        "f9110985-d9a4-449e-b426-27b7970fb9a1"
+        {
+          "id": "f9110985-d9a4-449e-b426-27b7970fb9a1",
+          "year": 1929,
+          "description": "Egeo, pittorica",
+          "ordinal": 100
+        }
       ]
     }
   ]
