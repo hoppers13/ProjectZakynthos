@@ -22,7 +22,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Demo", "Index", "Demo", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Wishlist", "Index", "Wishlist", new { area = "Demo" }, null)</li>
                 </ul>
             </div>
         </div>
@@ -31,7 +31,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Project Zakhyntos / Gianluca Cerritelli</p>
         </footer>
     </div>
 

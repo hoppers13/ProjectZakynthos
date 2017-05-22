@@ -8,7 +8,7 @@ namespace ProjectZakynthos.Web
         {
             // Web API configuration and services
             IoCConfig.Register(config);
-            
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 

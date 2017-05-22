@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ProjectZakynthos.Web.Controllers
+namespace ProjectZakynthos.Web.Areas.Demo.Controllers
 {
-    public class DemoController : Controller
+    public class WishlistController : Controller
     {
-        // GET: Demo
+        // GET: Demo/Wishlist
         public ActionResult Index()
         {
             return View();
