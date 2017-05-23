@@ -32,6 +32,13 @@ textarea {
     color: red;
 }
 
+.white{
+    color: white;
+}
+
+.right{
+    float: right;
+}
 .pointer{
     cursor: pointer;
 }
