@@ -22,12 +22,16 @@ textarea {
     margin: 20px 0 60px 0;
 }
 
-#wishlist .row{
-    border-bottom: 1px solid #808080; 
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+    #wishlist .row, #past-auctions .row, #upcoming-auctions .row {
+        border-bottom: 1px solid #808080;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+.red{
+    color: red;
 }
 
-#wishlist span.pointer{
+.pointer{
     cursor: pointer;
 }
