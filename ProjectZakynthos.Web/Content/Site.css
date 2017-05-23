@@ -24,6 +24,8 @@ textarea {
 
 #wishlist .row{
     border-bottom: 1px solid #808080; 
+    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 #wishlist span.pointer{
