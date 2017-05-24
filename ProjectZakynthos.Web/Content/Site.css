@@ -16,29 +16,45 @@ textarea {
     max-width: 280px;
 }
 
-
-/* Wishlist */
-#wishlist{
-    margin: 20px 0 60px 0;
-}
-
-    #wishlist .row, #past-auctions .row, #upcoming-auctions .row {
-        border-bottom: 1px solid #808080;
-        margin-bottom: 10px;
-        padding-bottom: 5px;
-    }
-
-.red{
+/* General*/
+.red {
     color: red;
 }
 
-.white{
+.white {
     color: white;
 }
 
-.right{
+.right {
     float: right;
 }
-.pointer{
+
+.pointer {
     cursor: pointer;
+}
+
+.suggestion{
+    color: lightgray;
+}
+
+/* Wishlist */
+#wishlist {
+    margin: 20px 0 60px 0;
+}
+
+#past-auctions .row, #upcoming-auctions .row {
+    border-bottom: 1px solid #808080;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+/* wished Item*/
+#past-auctions .row, #upcoming-auctions .row {
+    border-bottom: 1px solid #808080;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+#bid-form .modal-body{
+    margin:auto;
 }
