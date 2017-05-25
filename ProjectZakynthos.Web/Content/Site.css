@@ -35,6 +35,7 @@ textarea {
 
 .suggestion{
     color: lightgray;
+    font-weight:600;
 }
 
 /* Wishlist */
@@ -42,7 +43,7 @@ textarea {
     margin: 20px 0 60px 0;
 }
 
-#past-auctions .row, #upcoming-auctions .row {
+#wishlist .row {
     border-bottom: 1px solid #808080;
     margin-bottom: 10px;
     padding-bottom: 5px;
@@ -55,6 +56,10 @@ textarea {
     padding-bottom: 5px;
 }
 
-#bid-form .modal-body{
-    margin:auto;
+#bid-suggestion{
+    margin-top: 1.5em;
+}
+
+#catalogue-values{
+    margin-top: 2.5em;
 }
