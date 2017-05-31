@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using ProjectZakynthos.Persistence;
 using System.Web.Mvc;
 
 namespace ProjectZakynthos.Web.Areas.Demo.Controllers
 {
-    public class WishController : Controller
+	public class WishController : Controller
     {
-        // GET: Demo/Wish
-        [Authorize]
+		IWishRepository repository;
+
+		public WishController(IWishRepository repository)
+		{
+			this.repository = repository;
+		}
+
+		// GET: Demo/Wish
+		[Authorize]
         public ActionResult Index()
         {
             return View();
