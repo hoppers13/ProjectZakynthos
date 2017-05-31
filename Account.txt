@@ -1,1 +1,1 @@
-collector@mail.com : Abced12345!
+collector@email.com : Abced12345!

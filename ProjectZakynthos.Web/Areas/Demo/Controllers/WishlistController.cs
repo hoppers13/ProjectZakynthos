@@ -5,7 +5,7 @@ namespace ProjectZakynthos.Web.Areas.Demo.Controllers
     public class WishlistController : Controller
     {
         // GET: Demo/Wishlist
-        //[Authorize]
+        [Authorize]
         public ActionResult Index()
         {
             return View();
