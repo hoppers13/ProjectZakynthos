@@ -33,15 +33,15 @@ textarea {
     cursor: pointer;
 }
 
-.suggestion{
+.suggestion {
     color: lightgray;
-    font-weight:600;
+    font-weight: 600;
 }
 
 /* Home*/
-#home-banner{
- background-image: url("Images/home1.jpg");
- color: white;
+#home-banner {
+    background-image: url("Images/home1.jpg");
+    color: white;
 }
 
 /* Wishlist */
@@ -49,11 +49,11 @@ textarea {
     margin: 20px 0 60px 0;
 }
 
-#wishlist .row {
-    border-bottom: 1px solid #808080;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-}
+    #wishlist .row {
+        border-bottom: 1px solid #808080;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
 
 /* wished Item*/
 #past-auctions .row, #upcoming-auctions .row {
@@ -62,10 +62,10 @@ textarea {
     padding-bottom: 5px;
 }
 
-#bid-suggestion{
+#bid-suggestion {
     margin-top: 1.5em;
 }
 
-#catalogue-values{
+#catalogue-values {
     margin-top: 2.5em;
 }
