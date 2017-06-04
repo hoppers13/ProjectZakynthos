@@ -204,9 +204,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
-    <Compile Include="Areas\Demo\Controllers\WishController.cs" />
-    <Compile Include="Areas\Demo\Controllers\WishlistController.cs" />
     <Compile Include="Areas\Demo\DemoAreaRegistration.cs" />
+    <Compile Include="Areas\stamps\Controllers\WishController.cs" />
     <Compile Include="Areas\stamps\Controllers\WishlistController.cs" />
     <Compile Include="Areas\stamps\stampsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -237,7 +236,7 @@
     <Content Include="Areas\stamps\Views\Wishlist\Index.cshtml" />
     <Content Include="Areas\Demo\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Demo\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Demo\Views\Wish\Index.cshtml" />
+    <Content Include="Areas\stamps\Views\Wish\Index.cshtml" />
     <Content Include="Areas\stamps\Views\web.config" />
     <Content Include="Areas\stamps\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\stamps\Views\_ViewStart.cshtml" />
@@ -292,8 +291,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Demo\Controllers\" />
     <Folder Include="Areas\Demo\Models\" />
-    <Folder Include="Areas\Demo\Views\Wishlist\" />
     <Folder Include="Areas\stamps\Models\" />
   </ItemGroup>
   <ItemGroup>
