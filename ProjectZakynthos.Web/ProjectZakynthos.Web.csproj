@@ -207,6 +207,7 @@
     <Compile Include="Areas\Demo\DemoAreaRegistration.cs" />
     <Compile Include="Areas\stamps\Controllers\WishController.cs" />
     <Compile Include="Areas\stamps\Controllers\WishlistController.cs" />
+    <Compile Include="Areas\stamps\Models\WishlistViewModel.cs" />
     <Compile Include="Areas\stamps\stampsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -241,6 +242,7 @@
     <Content Include="Areas\stamps\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\stamps\Views\_ViewStart.cshtml" />
     <Content Include="Areas\stamps\Views\Wishlist\Manage.cshtml" />
+    <Content Include="Areas\stamps\Views\Wishlist\EditorTemplates\PhilatelicItem.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -293,7 +295,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Demo\Controllers\" />
     <Folder Include="Areas\Demo\Models\" />
-    <Folder Include="Areas\stamps\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

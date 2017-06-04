@@ -1,0 +1,9 @@
+﻿@using ProjectZakynthos.Web.Areas.stamps.Models
+@model PhilatelicItem
+
+<tr>
+	<td>@Html.DisplayFor(x => x.Country)</td>
+	<td>@Html.EditorFor(x => x.Year)</td>
+	<td>@Html.EditorFor(x => x.FaceValue)</td>
+	<td>@Html.EditorFor(x => x.Description)</td>
+</tr>
