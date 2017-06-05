@@ -45,6 +45,5 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		{
 			return View(model);
 		}
-
     }
 }

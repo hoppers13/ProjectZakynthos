@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ProjectZakynthos.Presistence.InMemory")]
+[assembly: AssemblyTitle("ProjectZakynthos.Persistence.InMemory")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ProjectZakynthos.Presistence.InMemory")]
+[assembly: AssemblyProduct("ProjectZakynthos.Persistence.InMemory")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("284b43ca-7294-4ee4-8752-ba1d5d0622df")]
+[assembly: Guid("55d9550f-6ec7-408d-bcf8-044b0b63143f")]
 
 // Version information for an assembly consists of the following four values:
 //

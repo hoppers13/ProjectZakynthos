@@ -18,7 +18,7 @@ namespace ProjectZakynthos.Web
             container.RegisterType<ManageController>(new InjectionConstructor());
             
             // wishlist
-            container.RegisterType<IWishlistRepository, WishlistRepository>();
+            container.RegisterType<IWishlistRepository, Persistence.InMemory.WishlistRepository>();
 			container.RegisterType<IWishRepository, WishRepository>();
 
 			DependencyResolver.SetResolver(new UnityDependencyResolver(container));

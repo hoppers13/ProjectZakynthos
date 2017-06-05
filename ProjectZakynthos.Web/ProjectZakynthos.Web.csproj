@@ -321,6 +321,10 @@
       <Project>{7BFD6B4A-8BB0-4F3C-97EC-9E0ABCC8C396}</Project>
       <Name>ProjectZakynthos.Persistence.FileSystem</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProjectZakynthos.Persistence.InMemory\ProjectZakynthos.Persistence.InMemory.csproj">
+      <Project>{55d9550f-6ec7-408d-bcf8-044b0b63143f}</Project>
+      <Name>ProjectZakynthos.Persistence.InMemory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProjectZakynthos.Persistence\ProjectZakynthos.Persistence.csproj">
       <Project>{CB8BAE81-23A0-4A01-8AFA-A6541C60B833}</Project>
       <Name>ProjectZakynthos.Persistence</Name>
