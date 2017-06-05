@@ -1,1 +1,2 @@
 collector@email.com : Abced12345!
+dealer@email.com : 12345Abcde!
