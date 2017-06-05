@@ -207,6 +207,7 @@
     <Compile Include="Areas\Demo\DemoAreaRegistration.cs" />
     <Compile Include="Areas\stamps\Controllers\WishController.cs" />
     <Compile Include="Areas\stamps\Controllers\WishlistController.cs" />
+    <Compile Include="Areas\stamps\Models\PhilatelicItemViewModel.cs" />
     <Compile Include="Areas\stamps\Models\WishlistViewModel.cs" />
     <Compile Include="Areas\stamps\stampsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -242,7 +243,7 @@
     <Content Include="Areas\stamps\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\stamps\Views\_ViewStart.cshtml" />
     <Content Include="Areas\stamps\Views\Wishlist\Manage.cshtml" />
-    <Content Include="Areas\stamps\Views\Wishlist\EditorTemplates\PhilatelicItem.cshtml" />
+    <Content Include="Areas\stamps\Views\Wishlist\EditorTemplates\PhilatelicItemViewModel.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -312,6 +313,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProjectZakynthos.Domain\ProjectZakynthos.Domain.csproj">
+      <Project>{21163688-E87B-409C-9BCF-AAAB2478891E}</Project>
+      <Name>ProjectZakynthos.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProjectZakynthos.Persistence.FileSystem\ProjectZakynthos.Persistence.FileSystem.csproj">
       <Project>{7BFD6B4A-8BB0-4F3C-97EC-9E0ABCC8C396}</Project>
       <Name>ProjectZakynthos.Persistence.FileSystem</Name>

@@ -1,0 +1,20 @@
+﻿@using ProjectZakynthos.Domain.Philately;
+@using ProjectZakynthos.Web.Areas.stamps.Models
+@model PhilatelicItemViewModel
+
+<tr>
+    <td>
+        @Html.EnumDropDownListFor(x => x.Catalogue)
+        <span class="catalogue-number">
+            @Html.EditorFor(x => x.CatalogueNumber)
+        </span>
+        
+    </td>
+    <td>@Html.EditorFor(x => x.Area)</td>
+   	<td>
+        <span class="catalogue-year">@Html.EditorFor(x => x.Year)</span>
+    </td>
+    <td>
+    <span class="item-description">@Html.EditorFor(x => x.Description)</span></td>
+    <td>@Html.EnumDropDownListFor(x => x.Conditions) </td>	
+</tr>

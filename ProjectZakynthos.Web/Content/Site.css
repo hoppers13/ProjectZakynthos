@@ -49,12 +49,25 @@ textarea {
     margin: 20px 0 60px 0;
 }
 
-    #wishlist .row {
-        border-bottom: 1px solid #808080;
-        margin-bottom: 10px;
-        padding-bottom: 5px;
-    }
+#wishlist .row {
+    border-bottom: 1px solid #808080;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
 
+
+/* Wishlist manage*/
+span.catalogue-number input {
+    width: 3.5em;
+}
+
+span.catalogue-year input {
+    width: 3em;
+}
+
+span.item-description input {
+    width: 35em;
+}
 /* wished Item*/
 #past-auctions .row, #upcoming-auctions .row {
     border-bottom: 1px solid #808080;
