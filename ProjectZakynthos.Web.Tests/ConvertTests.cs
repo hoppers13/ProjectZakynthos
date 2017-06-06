@@ -9,7 +9,7 @@ namespace given_a_wishlist_viewmodel
         [TestMethod]
         public void one_should_be_one()
         {
-            Assert.AreEqual(1, 1);
+            Assert.AreEqual(0, 1);
         }
     }
 }
