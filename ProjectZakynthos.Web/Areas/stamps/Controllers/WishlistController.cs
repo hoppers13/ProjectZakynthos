@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using System.Collections.Generic;
 using Microsoft.AspNet.Identity;
 
@@ -46,9 +47,11 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		[HttpPost]
 		public ActionResult Manage(WishlistViewModel model)
 		{
-            var user = User.Identity.GetUserId();
-			var wishlist = Convert.ToWishlist(model);
-			
+            var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
+			var wishlist = Mappers.Convert.ToWishlist(model);
+
+			repository.SaveWishlist(userIdentity, wishlist);
+
 			return View(model);
 		}
     }

@@ -9,7 +9,15 @@ namespace ProjectZakynthos.Persistence.InMemory
     {
         private static Dictionary<UserIdentity, Wishlist> store;
         
-        public Wishlist GetWishlist(UserIdentity userId)
+		public WishlistRepository()
+		{
+			if(store == null)
+			{
+				store = new Dictionary<UserIdentity, Wishlist>();
+			}
+		}
+
+		public Wishlist GetWishlist(UserIdentity userId)
         {
             if (store.ContainsKey(userId))
             {
@@ -21,7 +29,14 @@ namespace ProjectZakynthos.Persistence.InMemory
 
         public void SaveWishlist(UserIdentity userId, Wishlist wishlist)
         {
-            throw new NotImplementedException();
+			if (store.ContainsKey(userId)) {
+				// update wishlist
+				store[userId] = wishlist;
+				return;
+			} 
+			
+			// add new wishlist
+			store.Add(userId, wishlist);
         }
     }
 }
