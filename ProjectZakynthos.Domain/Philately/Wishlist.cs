@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjectZakynthos.Domain.Philately
 {
-    public class Wishlist : List<PhilatelicItem>
+	public class Wishlist : List<PhilatelicItem>
     {
 		public Wishlist() { }
 
@@ -12,6 +13,12 @@ namespace ProjectZakynthos.Domain.Philately
 			{
 				this.Add(wish);
 			}
+		}
+
+		public Wishlist Relevant()
+		{
+			var clean = this.Where(wish => wish.CatalogueReferences.Any(catRef => !string.IsNullOrWhiteSpace(catRef.Number)));
+			return new Wishlist(clean);			
 		}
     }
 }

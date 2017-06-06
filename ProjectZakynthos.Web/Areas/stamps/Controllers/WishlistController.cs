@@ -22,6 +22,8 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
         // GET: stamps/Wishlist
         public ActionResult Index()
         {
+
+
             return View();
         }
 
@@ -48,8 +50,8 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		public ActionResult Manage(WishlistViewModel model)
 		{
             var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
-			var wishlist = Mappers.Convert.ToWishlist(model);
-
+			var wishlist = Mappers.Convert.ToWishlist(model).Relevant();
+			
 			repository.SaveWishlist(userIdentity, wishlist);
 
 			return View(model);
