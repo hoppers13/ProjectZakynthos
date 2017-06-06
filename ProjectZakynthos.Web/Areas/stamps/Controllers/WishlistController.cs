@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity;
 
 using ProjectZakynthos.Persistence;
 using ProjectZakynthos.Web.Areas.stamps.Models;
+using ProjectZakynthos.Web.Mappers;
 
 namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 {
@@ -46,9 +47,8 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		public ActionResult Manage(WishlistViewModel model)
 		{
             var user = User.Identity.GetUserId();
-
-
-
+			var wishlist = Convert.ToWishlist(model);
+			
 			return View(model);
 		}
     }
