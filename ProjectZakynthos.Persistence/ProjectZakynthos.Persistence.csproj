@@ -40,9 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IWishlistRepoistory.cs" />
+    <Compile Include="IWishlistRepository.cs" />
     <Compile Include="IWishRepositorycs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectZakynthos.Domain\ProjectZakynthos.Domain.csproj">
+      <Project>{21163688-E87B-409C-9BCF-AAAB2478891E}</Project>
+      <Name>ProjectZakynthos.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

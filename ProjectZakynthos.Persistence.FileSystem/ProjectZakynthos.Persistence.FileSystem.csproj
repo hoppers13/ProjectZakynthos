@@ -45,6 +45,10 @@
     <Compile Include="WishRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProjectZakynthos.Domain\ProjectZakynthos.Domain.csproj">
+      <Project>{21163688-E87B-409C-9BCF-AAAB2478891E}</Project>
+      <Name>ProjectZakynthos.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProjectZakynthos.Persistence\ProjectZakynthos.Persistence.csproj">
       <Project>{cb8bae81-23a0-4a01-8afa-a6541c60b833}</Project>
       <Name>ProjectZakynthos.Persistence</Name>

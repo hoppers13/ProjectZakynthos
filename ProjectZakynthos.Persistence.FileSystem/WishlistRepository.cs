@@ -1,13 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
+using ProjectZakynthos.Domain;
+using ProjectZakynthos.Domain.Philately;
 
 namespace ProjectZakynthos.Persistence.FileSystem
 {
-	public class WishlistRepository : IWishlistRepository
+    public class WishlistRepository : IWishlistRepository
 	{
-		public IEnumerable<string> GetWishlist()
-		{
-			throw new NotImplementedException();
-		}
-	}
+		public Wishlist GetWishlist(UserIdentity userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveWishlist(UserIdentity userId, Wishlist wishlist)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

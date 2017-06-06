@@ -1,7 +1,9 @@
 ﻿using System.Web.Mvc;
-using ProjectZakynthos.Web.Areas.stamps.Models;
 using System.Collections.Generic;
+using Microsoft.AspNet.Identity;
+
 using ProjectZakynthos.Persistence;
+using ProjectZakynthos.Web.Areas.stamps.Models;
 
 namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 {
@@ -43,6 +45,10 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		[HttpPost]
 		public ActionResult Manage(WishlistViewModel model)
 		{
+            var user = User.Identity.GetUserId();
+
+
+
 			return View(model);
 		}
     }
