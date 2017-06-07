@@ -2,16 +2,14 @@
 using System.Web.Mvc;
 using System.Collections.Generic;
 using Microsoft.AspNet.Identity;
-
+using System.Linq;
 using ProjectZakynthos.Persistence;
 using ProjectZakynthos.Web.Areas.stamps.Models;
-using ProjectZakynthos.Web.Mappers;
-using System.Linq;
 using ProjectZakynthos.Domain.Philately;
 
 namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 {
-	[Authorize]
+    [Authorize]
     public class WishlistController : Controller
     {
         IWishlistRepository repository;
@@ -58,9 +56,7 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
             }
 
             var manageWishlist = Mappers.Convert.ToManageWishlistViewModel(wishlist);
-
-
-
+            
             var repeat = Enumerable.Range(1, wishlistMaxSize - manageWishlist.Items.Count());
 
             var spareSlots = new List<ManagePhilatelicItemViewModel>();
@@ -82,7 +78,7 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 			
 			repository.SaveWishlist(userIdentity, wishlist);
 
-			return View(model);
+			return RedirectToAction("Index","Wishlist");
 		}
     }
 }

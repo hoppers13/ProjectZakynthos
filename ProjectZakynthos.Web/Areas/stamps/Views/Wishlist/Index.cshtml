@@ -6,7 +6,11 @@
 }
 
 <h2>Your wishlist</h2>
-<span>@Html.ActionLink("Manage Wishlist", "Manage", "Wishlist", new { area = "stamps" }, null)</span>
+@if (Model != null)
+{
+    <span>@Html.ActionLink("Manage Wishlist", "Manage", "Wishlist", new { area = "stamps" }, null)</span>
+}
+
 <div id="wishlist">
     <div class="row">
         <div class="col-md-6">
@@ -15,14 +19,16 @@
         <div class="col-md-6">
             @if (Model != null)
             {
-                <h4>Next auction</h4>
+                <h4>
+                    Next auction
+                </h4>
             }
         </div>    
     </div>
     @if(Model == null)
     {
         <div class="row">
-            <h3>Create your own wishlist</h3>
+            <h3>@Html.ActionLink("Create your own wishlist", "Manage", "Wishlist", new { area = "stamps" }, null)</h3>
         </div>
     }
     else
