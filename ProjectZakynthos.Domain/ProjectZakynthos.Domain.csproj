@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Philately\AuctionedPhilatelicItem.cs" />
+    <Compile Include="Philately\CatalogueAbbreviations.cs" />
     <Compile Include="Philately\CatalogueReference.cs" />
     <Compile Include="Philately\CataloguesInUse.cs" />
     <Compile Include="Philately\CatalogueValue.cs" />

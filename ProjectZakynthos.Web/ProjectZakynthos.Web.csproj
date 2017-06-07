@@ -209,6 +209,8 @@
     <Compile Include="Areas\stamps\Controllers\WishlistController.cs" />
     <Compile Include="Areas\stamps\Models\ManagePhilatelicItemViewModel.cs" />
     <Compile Include="Areas\stamps\Models\ManageWishlistViewModel.cs" />
+    <Compile Include="Areas\stamps\Models\ShowWishlistItemViewModel.cs" />
+    <Compile Include="Areas\stamps\Models\ShowWishlistViewModel.cs" />
     <Compile Include="Areas\stamps\stampsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

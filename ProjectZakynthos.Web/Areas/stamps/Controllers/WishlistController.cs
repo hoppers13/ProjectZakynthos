@@ -22,9 +22,14 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
         // GET: stamps/Wishlist
         public ActionResult Index()
         {
+            var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
+            var wishlist = repository.GetWishlist(userIdentity);
 
+            if(wishlist == null) { return View(); }
 
-            return View();
+            var model = Mappers.Convert.ToShowWishlistViewModel(wishlist);
+
+            return View(model);
         }
 
 		[HttpGet]
@@ -42,8 +47,8 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 					new ManagePhilatelicItemViewModel{Area = "GB"}					
 				}
 			};
-			
-			return View(model);
+                        
+            return View(model);
 		}
 
 		[HttpPost]

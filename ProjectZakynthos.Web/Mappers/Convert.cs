@@ -28,6 +28,26 @@ namespace ProjectZakynthos.Web.Mappers
 			});
 
 			return new Wishlist(conversion);
-		} 
-	}
+		}
+
+        internal static ShowWishlistViewModel ToShowWishlistViewModel(Wishlist wishlist)
+        {
+            var conversion = wishlist.Select(item => {
+                var catalogue = item.CatalogueReferences.First(x => !string.IsNullOrEmpty(x.Area));
+
+                return new ShowWishlistItemViewModel
+                {
+                    Id = item.Id,
+                    Year = item.Year,
+                    Area = catalogue.Area,
+                    Description = item.Description ?? "-",
+                    CatalogueNumber = $"{ new CatalogueAbbreviations()[catalogue.Catalogue] } {catalogue.Number}",
+                    NextAuction = DateTime.MinValue,
+                    NextAuctionHouse = "none"
+                };
+            });
+            
+            return new ShowWishlistViewModel { Items = conversion};
+        }
+    }
 }
