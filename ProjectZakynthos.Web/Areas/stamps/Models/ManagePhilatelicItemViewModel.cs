@@ -2,7 +2,7 @@
 
 namespace ProjectZakynthos.Web.Areas.stamps.Models
 {
-    public class PhilatelicItemViewModel
+    public class ManagePhilatelicItemViewModel
     {
         //public Guid Id { get; set; }
         public CataloguesInUse Catalogue { get; set; }

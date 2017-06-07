@@ -8,7 +8,7 @@ namespace ProjectZakynthos.Web.Mappers
 {
 	public class Convert
 	{
-		public static Wishlist ToWishlist(WishlistViewModel model)
+		public static Wishlist ToWishlist(ManageWishlistViewModel model)
 		{
 			var conversion = model.Items.Select(item => new PhilatelicItem {
 				Id = Guid.NewGuid(),

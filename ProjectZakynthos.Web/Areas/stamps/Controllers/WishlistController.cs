@@ -30,16 +30,16 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		[HttpGet]
 		public ActionResult Manage()
 		{
-			var model = new WishlistViewModel
+			var model = new ManageWishlistViewModel
 			{
-				Items = new List<PhilatelicItemViewModel>
+				Items = new List<ManagePhilatelicItemViewModel>
 				{
-					new PhilatelicItemViewModel{Area = "GB"},
-					new PhilatelicItemViewModel{Area = "GB"},
-					new PhilatelicItemViewModel{Area = "GB"},
-					new PhilatelicItemViewModel{Area = "GB"},
-					new PhilatelicItemViewModel{Area = "GB"},
-					new PhilatelicItemViewModel{Area = "GB"}					
+					new ManagePhilatelicItemViewModel{Area = "GB"},
+					new ManagePhilatelicItemViewModel{Area = "GB"},
+					new ManagePhilatelicItemViewModel{Area = "GB"},
+					new ManagePhilatelicItemViewModel{Area = "GB"},
+					new ManagePhilatelicItemViewModel{Area = "GB"},
+					new ManagePhilatelicItemViewModel{Area = "GB"}					
 				}
 			};
 			
@@ -47,7 +47,7 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Manage(WishlistViewModel model)
+		public ActionResult Manage(ManageWishlistViewModel model)
 		{
             var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
 			var wishlist = Mappers.Convert.ToWishlist(model).Relevant();
