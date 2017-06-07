@@ -14,8 +14,8 @@ namespace ProjectZakynthos.Domain.Philately
 				this.Add(wish);
 			}
 		}
-
-		public Wishlist Relevant()
+        
+		public Wishlist TakeRelevant()
 		{
 			var clean = this.Where(wish => wish.CatalogueReferences.Any(catRef => !string.IsNullOrWhiteSpace(catRef.Number)));
 			return new Wishlist(clean);			

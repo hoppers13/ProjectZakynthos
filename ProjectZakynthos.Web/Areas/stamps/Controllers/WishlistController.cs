@@ -6,6 +6,8 @@ using Microsoft.AspNet.Identity;
 using ProjectZakynthos.Persistence;
 using ProjectZakynthos.Web.Areas.stamps.Models;
 using ProjectZakynthos.Web.Mappers;
+using System.Linq;
+using ProjectZakynthos.Domain.Philately;
 
 namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 {
@@ -35,27 +37,48 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		[HttpGet]
 		public ActionResult Manage()
 		{
-			var model = new ManageWishlistViewModel
-			{
-				Items = new List<ManagePhilatelicItemViewModel>
-				{
-					new ManagePhilatelicItemViewModel{Area = "GB"},
-					new ManagePhilatelicItemViewModel{Area = "GB"},
-					new ManagePhilatelicItemViewModel{Area = "GB"},
-					new ManagePhilatelicItemViewModel{Area = "GB"},
-					new ManagePhilatelicItemViewModel{Area = "GB"},
-					new ManagePhilatelicItemViewModel{Area = "GB"}					
-				}
-			};
-                        
-            return View(model);
+            var wishlistMaxSize = 6;
+
+			var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
+            var wishlist = repository.GetWishlist(userIdentity);
+
+            if(wishlist == null)
+            {
+                return View(new ManageWishlistViewModel {
+                    Items = new List<ManagePhilatelicItemViewModel>
+                    {
+                        new ManagePhilatelicItemViewModel { Catalogue = CataloguesInUse.STANLEY_GIBBONS, Area = "GB" },
+                        new ManagePhilatelicItemViewModel { Catalogue = CataloguesInUse.STANLEY_GIBBONS, Area = "GB" },
+                        new ManagePhilatelicItemViewModel { Catalogue = CataloguesInUse.STANLEY_GIBBONS, Area = "GB" },
+                        new ManagePhilatelicItemViewModel { Catalogue = CataloguesInUse.STANLEY_GIBBONS, Area = "GB" },
+                        new ManagePhilatelicItemViewModel { Catalogue = CataloguesInUse.STANLEY_GIBBONS, Area = "GB" },
+                        new ManagePhilatelicItemViewModel { Catalogue = CataloguesInUse.STANLEY_GIBBONS, Area = "GB" }
+                    }       
+                });
+            }
+
+            var manageWishlist = Mappers.Convert.ToManageWishlistViewModel(wishlist);
+
+
+
+            var repeat = Enumerable.Range(1, wishlistMaxSize - manageWishlist.Items.Count());
+
+            var spareSlots = new List<ManagePhilatelicItemViewModel>();
+            foreach(var i in repeat)
+            {
+                spareSlots.Add(new ManagePhilatelicItemViewModel { Catalogue = CataloguesInUse.STANLEY_GIBBONS, Area = "GB" });                  
+            }
+            var final = manageWishlist.Items.Concat(spareSlots);
+            manageWishlist.Items = final;
+
+            return View(manageWishlist);
 		}
 
 		[HttpPost]
 		public ActionResult Manage(ManageWishlistViewModel model)
 		{
             var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
-			var wishlist = Mappers.Convert.ToWishlist(model).Relevant();
+			var wishlist = Mappers.Convert.ToWishlist(model).TakeRelevant();
 			
 			repository.SaveWishlist(userIdentity, wishlist);
 

@@ -49,5 +49,24 @@ namespace ProjectZakynthos.Web.Mappers
             
             return new ShowWishlistViewModel { Items = conversion};
         }
+
+        internal static ManageWishlistViewModel ToManageWishlistViewModel(Wishlist wishlist)
+        {
+            var conversion = wishlist.Select(item => {
+                var catalogue = item.CatalogueReferences.First(x => !string.IsNullOrEmpty(x.Area));
+
+                return new ManagePhilatelicItemViewModel
+                {
+                    Year = item.Year,
+                    Area = catalogue.Area,
+                    Catalogue = catalogue.Catalogue,
+                    CatalogueNumber = catalogue.Number,
+                    Description = item.Description,
+                    Conditions = item.Conditions
+                };
+            });
+
+            return new ManageWishlistViewModel { Items = conversion };
+        }
     }
 }
