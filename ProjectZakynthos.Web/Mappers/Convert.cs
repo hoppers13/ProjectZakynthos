@@ -40,10 +40,11 @@ namespace ProjectZakynthos.Web.Mappers
                     Id = item.Id,
                     Year = item.Year,
                     Area = catalogue.Area,
-                    Description = item.Description ?? "-",
+                    Description = item.Description ?? string.Empty ,
+                    Conditions = item.Conditions,
                     CatalogueNumber = $"{ new CatalogueAbbreviations()[catalogue.Catalogue] } {catalogue.Number}",
                     NextAuction = DateTime.MinValue,
-                    NextAuctionHouse = "none"
+                    NextAuctionHouse = "the item is not offered by any auction house at the moment"
                 };
             });
             
