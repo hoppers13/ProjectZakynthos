@@ -1,0 +1,53 @@
+[
+  {
+    "Id": "1c362074-96b0-40ab-8988-c06c0c1f5efc",
+    "Year": 1899,
+    "Type": 0,
+    "Description": "2d. deep violet (15.12.99)",
+    "Conditions": 4,
+    "CatalogueReferences": [
+      {
+        "Id": "6fae29a0-6cbe-4316-8f0d-125d9267b627",
+        "Catalogue": 0,
+        "Area": "Australia",
+        "Number": "231"
+      }
+    ],
+    "UpcomingAuctions": null,
+    "PastAuctions": null
+  },
+  {
+    "Id": "7d22998b-c393-46e5-bda3-ef828e890b0b",
+    "Year":1883,
+    "Type": 0,
+    "Description": "1/2 d. vermillion Doubly printed",
+    "Conditions": 4,
+    "CatalogueReferences": [
+      {
+        "Id": "9414c495-4c99-401f-9f47-e0e760306089",
+        "Catalogue": 0,
+        "Area": "GB",
+        "Number": "197c"
+      }
+    ],
+    "UpcomingAuctions": null,
+    "PastAuctions": null
+  },
+  {
+    "Id": "5f9e829c-1cae-44f7-9fcc-bb8cd43c2449",
+    "Year":1902,
+    "Type": 0,
+    "Description": "£1 dull blue-green (16.6.02)",
+    "Conditions": 4,
+    "CatalogueReferences": [
+      {
+        "Id": "27d1d38c-d8d5-45c8-a6bf-1fc3e5cefe41",
+        "Catalogue": 0,
+        "Area": "GB",
+        "Number": "266"
+      }
+    ],
+    "UpcomingAuctions": null,
+    "PastAuctions": null
+  }
+]

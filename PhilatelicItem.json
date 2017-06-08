@@ -1,0 +1,17 @@
+{
+  "Id": "1c362074-96b0-40ab-8988-c06c0c1f5efc",
+  "Year": 1899,
+  "Type": 0,
+  "Description": "2d. deep violet (15.12.99)",
+  "Conditions": 4,
+  "CatalogueReferences": [
+    {
+      "Id": "6fae29a0-6cbe-4316-8f0d-125d9267b627",
+      "Catalogue": 0,
+      "Area": "Australia",
+      "Number": "231"
+    }
+  ],
+  "UpcomingAuctions": null,
+  "PastAuctions": null
+}

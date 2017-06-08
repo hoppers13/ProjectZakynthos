@@ -8,6 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{5D147F5D-D245-446B-BD96-9D1828CBCBE7}"
 	ProjectSection(SolutionItems) = preProject
 		Account.txt = Account.txt
+		collectionsSample.json = collectionsSample.json
+		itemSample.json = itemSample.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.Persistence", "ProjectZakynthos.Persistence\ProjectZakynthos.Persistence.csproj", "{CB8BAE81-23A0-4A01-8AFA-A6541C60B833}"
@@ -21,6 +23,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C599D128-85C4-4773-BB78-977887C26F8D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.Web.Tests", "ProjectZakynthos.Web.Tests\ProjectZakynthos.Web.Tests.csproj", "{7DD24477-2CB7-4B34-97CD-5E4B614FF678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.API", "ProjectZakynthos.API\ProjectZakynthos.API.csproj", "{B744EC80-1F70-4A37-A5AF-1A43CB794CB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sampleData", "sampleData", "{059BBBD6-EB4A-4AB4-8EC3-FF99EAD2D7D0}"
+	ProjectSection(SolutionItems) = preProject
+		sampleData\philatelicItemDB.json = sampleData\philatelicItemDB.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +61,10 @@ Global
 		{7DD24477-2CB7-4B34-97CD-5E4B614FF678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DD24477-2CB7-4B34-97CD-5E4B614FF678}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DD24477-2CB7-4B34-97CD-5E4B614FF678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B744EC80-1F70-4A37-A5AF-1A43CB794CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B744EC80-1F70-4A37-A5AF-1A43CB794CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B744EC80-1F70-4A37-A5AF-1A43CB794CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B744EC80-1F70-4A37-A5AF-1A43CB794CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
