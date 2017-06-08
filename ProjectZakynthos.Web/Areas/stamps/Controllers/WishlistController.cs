@@ -13,10 +13,12 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
     public class WishlistController : Controller
     {
         IWishlistRepository repository;
+        IPhilatelicItemRepository itemsRepository;
 
-        public WishlistController(IWishlistRepository repository)
+        public WishlistController(IWishlistRepository repository, IPhilatelicItemRepository itemsRepository)
         {
             this.repository = repository;
+            this.itemsRepository = itemsRepository;
         }
 
         // GET: stamps/Wishlist
@@ -26,6 +28,8 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
             var wishlist = repository.GetWishlist(userIdentity);
 
             if(wishlist == null) { return View(); }
+
+            var items = itemsRepository.GetAll();
 
             var model = Mappers.Convert.ToShowWishlistViewModel(wishlist);
 

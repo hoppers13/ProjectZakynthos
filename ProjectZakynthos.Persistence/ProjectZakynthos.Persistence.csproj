@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPhilatelicItemRepository.cs" />
     <Compile Include="IWishlistRepository.cs" />
     <Compile Include="IWishRepositorycs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
