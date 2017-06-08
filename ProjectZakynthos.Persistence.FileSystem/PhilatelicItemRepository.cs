@@ -12,7 +12,7 @@ namespace ProjectZakynthos.Persistence.FileSystem
 {
     public class PhilatelicItemRepository : IPhilatelicItemRepository
     {
-        string dbLocation = ConfigurationManager.AppSettings["philatelicItemDB"];
+		string dbLocation = @".\sampleData\philatelicItemDB.json";   ///ConfigurationManager.AppSettings["philatelicItemDB"];
 
         public IEnumerable<PhilatelicItem> GetAll()
         {

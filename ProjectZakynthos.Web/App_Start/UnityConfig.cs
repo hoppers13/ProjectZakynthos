@@ -20,7 +20,7 @@ namespace ProjectZakynthos.Web
             // wishlist
             container.RegisterType<IWishlistRepository, Persistence.InMemory.WishlistRepository>();
 			container.RegisterType<IWishRepository, WishRepository>();
-            container.RegisterType<IPhilatelicItemRepository, PhilatelicItemRepository>();
+            container.RegisterType<IPhilatelicItemRepository, Persistence.InMemory.PhilatelicItemRepository>();
 
 			DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

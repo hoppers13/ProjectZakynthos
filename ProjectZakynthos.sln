@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.Web", "ProjectZakynthos.Web\ProjectZakynthos.Web.csproj", "{2EA02833-1B08-40F6-9A4B-808208E96CF4}"
 EndProject
@@ -25,11 +25,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.Web.Tests", "ProjectZakynthos.Web.Tests\ProjectZakynthos.Web.Tests.csproj", "{7DD24477-2CB7-4B34-97CD-5E4B614FF678}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectZakynthos.API", "ProjectZakynthos.API\ProjectZakynthos.API.csproj", "{B744EC80-1F70-4A37-A5AF-1A43CB794CB7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sampleData", "sampleData", "{059BBBD6-EB4A-4AB4-8EC3-FF99EAD2D7D0}"
-	ProjectSection(SolutionItems) = preProject
-		sampleData\philatelicItemDB.json = sampleData\philatelicItemDB.json
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
