@@ -24,13 +24,11 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
         // GET: stamps/Wishlist
         public ActionResult Index()
         {
-            var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
+            var userIdentity = new Domain.UserIdentity { Name = User.Identity.Name };
             var wishlist = repository.GetWishlist(userIdentity);
 
             if(wishlist == null) { return View(); }
-
-            var items = itemsRepository.GetAll(); //all the data should be in the wishlist, so this will be redundant
-
+                        
             var model = Mappers.Convert.ToShowWishlistViewModel(wishlist);
 
             return View(model);
@@ -41,7 +39,7 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		{
             var wishlistMaxSize = 6;
 
-			var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
+			var userIdentity = new Domain.UserIdentity { Name = User.Identity.Name };
             var wishlist = repository.GetWishlist(userIdentity);
 
             if(wishlist == null)
@@ -77,7 +75,7 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		[HttpPost]
 		public ActionResult Manage(ManageWishlistViewModel model)
 		{
-            var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
+            var userIdentity = new Domain.UserIdentity { Name = User.Identity.Name };
 			var wishlist = Mappers.Convert.ToWishlist(model).Purge();
 			
 			repository.SaveWishlist(userIdentity, wishlist);
