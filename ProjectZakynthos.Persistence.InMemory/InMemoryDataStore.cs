@@ -13,6 +13,11 @@ namespace ProjectZakynthos.Persistence.InMemory
         static InMemoryDataStore()
         {
             philatelicItems = new Dictionary<Guid, PhilatelicItem>();
+            foreach(var item in SampleData.SamplePhilatelicItems.Items)
+            {
+                philatelicItems.Add(item.Id, item);
+            }
+
             wishlists = new Dictionary<UserIdentity, IEnumerable<Guid>>();
         }
 
