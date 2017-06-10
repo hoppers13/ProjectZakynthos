@@ -1,11 +1,22 @@
 ﻿using System.Collections.Generic;
 using ProjectZakynthos.Domain.Philately;
 using System.Linq;
+using System;
 
 namespace ProjectZakynthos.Persistence.InMemory
 {
     public class PhilatelicItemRepository : IPhilatelicItemRepository
 	{
+        public PhilatelicItem Get(Guid id)
+        {
+            if (InMemoryDataStore.PhilatelicItems.ContainsKey(id))
+            {
+                return InMemoryDataStore.PhilatelicItems[id];
+            }
+
+            return null;
+        }
+
         public IEnumerable<PhilatelicItem> GetAll()
 		{
             return InMemoryDataStore.PhilatelicItems.Values;

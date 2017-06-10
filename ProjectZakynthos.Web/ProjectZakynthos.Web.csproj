@@ -205,7 +205,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Areas\Demo\DemoAreaRegistration.cs" />
-    <Compile Include="Areas\stamps\Controllers\WishController.cs" />
     <Compile Include="Areas\stamps\Controllers\WishlistController.cs" />
     <Compile Include="Areas\stamps\Models\ManagePhilatelicItemViewModel.cs" />
     <Compile Include="Areas\stamps\Models\ManageWishlistViewModel.cs" />
@@ -241,12 +240,12 @@
     <Content Include="Areas\stamps\Views\Wishlist\Index.cshtml" />
     <Content Include="Areas\Demo\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Demo\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\stamps\Views\Wish\Index.cshtml" />
     <Content Include="Areas\stamps\Views\web.config" />
     <Content Include="Areas\stamps\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\stamps\Views\_ViewStart.cshtml" />
     <Content Include="Areas\stamps\Views\Wishlist\Manage.cshtml" />
     <Content Include="Areas\stamps\Views\Wishlist\EditorTemplates\ManagePhilatelicItemViewModel.cshtml" />
+    <Content Include="Areas\stamps\Views\Wishlist\Item.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

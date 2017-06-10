@@ -82,5 +82,12 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 
 			return RedirectToAction("Index","Wishlist");
 		}
+
+        public ActionResult Item(Guid id)
+        {
+            var item = itemsRepository.Get(id);
+
+            return View(item);
+        }
     }
 }

@@ -1,6 +1,9 @@
-﻿
+﻿@using ProjectZakynthos.Domain.Philately
+@model PhilatelicItem
+
 @{
-    ViewBag.Title = "Wished Item";
+    var catalogueNumber = $"({new CatalogueAbbreviations()[Model.CatalogueReference.Catalogue]} {Model.CatalogueReference.Number})";
+    ViewBag.Title = $"{Model.Year}, {Model.CatalogueReference.Area} {catalogueNumber}";
 }
 
 <!-- BID FORM-->
@@ -34,26 +37,22 @@
 
 
 <div id="wish-item">
-    <h2>1929, Egeo, serie 'Pittorica'</h2>
-
-    
+    <h2>@Model.Year, @Model.CatalogueReference.Area, @Model.Description, @catalogueNumber</h2>
+        
     <div class="row">
         <div class="col-md-3">
             <!-- UPCOMING AUCTIONS -->
             <div id="upcoming-auctions">
                 <h3> Upcoming Auctions</h3>
-                <div class="row">
-                    <div class="col-md-4">05/10/2017</div>
-                    <div class="col-md-4">Vaccari</div>
-                    <div class="col-md-2">€320</div>
-                    <div class="col-md-2"><a class="red pointer" data-toggle="modal" data-target="#bid-form">bid</a></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">03/03/2018</div>
-                    <div class="col-md-4">Ferrario</div>
-                    <div class="col-md-2">€270</div>
-                    <div class="col-md-2"><a class="red pointer" data-toggle="modal" data-target="#bid-form">bid</a></div>
-                </div>
+                @foreach (var auction in Model.UpcomingAuctions.OrderBy(x => x.AuctionDate))
+                {
+                    <div class="row">
+                        <div class="col-md-4">@auction.AuctionDate.Date.ToShortDateString()</div>
+                        <div class="col-md-4">@auction.AuctionHouse</div>
+                        <div class="col-md-2">£@auction.StartingBid</div>
+                        <div class="col-md-2"><a class="red pointer" data-toggle="modal" data-target="#bid-form">bid</a></div>
+                    </div>
+                }
             </div>
             
             <!-- CATALOGUE VALUES-->
