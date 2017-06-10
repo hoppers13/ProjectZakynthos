@@ -37,8 +37,8 @@ namespace ProjectZakynthos.Web.Mappers
                     Description = item.Description ?? string.Empty ,
                     Conditions = item.Conditions,
                     CatalogueNumber = $"{ new CatalogueAbbreviations()[item.CatalogueReference.Catalogue] } {item.CatalogueReference.Number}",
-                    NextAuction = DateTime.MinValue,
-                    NextAuctionHouse = "the item is not offered by any auction house at the moment"
+                    NextAuction = item.NextAuction != null ? item.NextAuction.AuctionDate : DateTime.MinValue,
+                    NextAuctionHouse = item.NextAuction != null ? item.NextAuction.AuctionHouse : "the item is not offered by any auction house at the moment"
                 }
             );
             

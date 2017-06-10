@@ -26,7 +26,16 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
 							Catalogue = CataloguesInUse.STANLEY_GIBBONS,
 							Area = "Australia",
 							Number = "231"
-						}					
+						},
+                    UpcomingAuctions = new List<AuctionedPhilatelicItem>
+                    {
+                        new AuctionedPhilatelicItem
+                        {
+                            AuctionDate = DateTime.Now.AddDays(14),
+                            StartingBid = 350,
+                            AuctionHouse = "Spink London"                            
+                        }
+                    }
 				},
 				new PhilatelicItem
 				{
@@ -40,8 +49,17 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
 							Catalogue = CataloguesInUse.STANLEY_GIBBONS,
 							Area = "GB",
 							Number = "197c"
-						}					
-				},
+						},
+                     UpcomingAuctions = new List<AuctionedPhilatelicItem>
+                    {
+                        new AuctionedPhilatelicItem
+                        {
+                            AuctionDate = DateTime.Now.AddDays(21),
+                            StartingBid = 1350,
+                            AuctionHouse = "Apex Auctions"
+                        }
+                    }
+                },
 				new PhilatelicItem
 				{
 					Id = new Guid("5f9e829c-1cae-44f7-9fcc-bb8cd43c2449"),

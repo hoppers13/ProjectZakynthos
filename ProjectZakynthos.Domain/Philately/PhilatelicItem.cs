@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjectZakynthos.Domain.Philately
 {
@@ -22,5 +23,16 @@ namespace ProjectZakynthos.Domain.Philately
                 && CatalogueReference.Area == reference.Area
                 && CatalogueReference.Number == reference.Number;            
         }
+        
+        public AuctionedPhilatelicItem NextAuction
+        {
+            get
+            {
+                if (UpcomingAuctions == null) return null;
+
+                var nextDate = UpcomingAuctions.Min(auction => auction.AuctionDate);
+                return UpcomingAuctions.FirstOrDefault(auction => auction.AuctionDate == nextDate);
+            }
+        } 
     }
 }
