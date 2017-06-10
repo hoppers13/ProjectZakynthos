@@ -21,14 +21,12 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
 					Type = PhilatelicItemType.Stamp,
 					Description = "2d. deep violet (15.12.99)",
 					Conditions = Conditions.MNH,
-					CatalogueReferences = new List<CatalogueReference>
-					{
-						new CatalogueReference{
+					CatalogueReference = 
+                        new CatalogueReference{
 							Catalogue = CataloguesInUse.STANLEY_GIBBONS,
 							Area = "Australia",
 							Number = "231"
-						}
-					}
+						}					
 				},
 				new PhilatelicItem
 				{
@@ -37,14 +35,12 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
 					Type = PhilatelicItemType.Stamp,
 					Description = "1/2 d. vermillion Doubly printed",
 					Conditions = Conditions.NoGum,
-					CatalogueReferences = new List<CatalogueReference>
-					{
+					CatalogueReference = 
 						new CatalogueReference{
 							Catalogue = CataloguesInUse.STANLEY_GIBBONS,
 							Area = "GB",
 							Number = "197c"
-						}
-					}
+						}					
 				},
 				new PhilatelicItem
 				{
@@ -53,17 +49,14 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
 					Type = PhilatelicItemType.Stamp,
 					Description = "£1 dull blue-green (16.6.02)",
 					Conditions = Conditions.MNH,
-					CatalogueReferences = new List<CatalogueReference>
-					{
-						new CatalogueReference{
+					CatalogueReference = 
+                        new CatalogueReference{
 							Catalogue = CataloguesInUse.STANLEY_GIBBONS,
 							Area = "GB",
 							Number = "266"
-						}
-					}
+						}					
 				}
 			};
-
 		}
 	}
 }

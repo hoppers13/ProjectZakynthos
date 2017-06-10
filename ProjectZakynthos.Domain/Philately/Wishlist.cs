@@ -15,9 +15,17 @@ namespace ProjectZakynthos.Domain.Philately
 			}
 		}
         
-		public Wishlist TakeRelevant()
+        //TODO: unit test
+        public IEnumerable<CatalogueReference> GetCatalogueReferences(CataloguesInUse catalogue)
+        {
+            return this.Select(wish => wish.CatalogueReference).Where(reference => reference.Catalogue == catalogue);
+        }
+
+        //TODO: unit test
+        // get rid of any element in the collection without a valid catalogue reference
+        public Wishlist Purge()
 		{
-			var clean = this.Where(wish => wish.CatalogueReferences.Any(catRef => !string.IsNullOrWhiteSpace(catRef.Number)));
+			var clean = this.Where(wish => !string.IsNullOrWhiteSpace(wish.CatalogueReference.Number));
 			return new Wishlist(clean);			
 		}
     }

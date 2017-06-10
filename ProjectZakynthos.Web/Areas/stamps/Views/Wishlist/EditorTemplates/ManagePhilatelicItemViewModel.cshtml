@@ -4,7 +4,8 @@
 
 <tr>
     <td>
-        @Html.EnumDropDownListFor(x => x.Catalogue)
+        @* @Html.EnumDropDownListFor(x => x.Catalogue) *@
+        @Html.DisplayFor(x => x.Catalogue)
         <span class="catalogue-number">
             @Html.EditorFor(x => x.CatalogueNumber)
         </span>

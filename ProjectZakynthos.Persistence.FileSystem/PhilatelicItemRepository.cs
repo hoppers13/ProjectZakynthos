@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ProjectZakynthos.Domain.Philately;
 using System.IO;
-using System.Configuration;
 using Newtonsoft.Json;
 
 namespace ProjectZakynthos.Persistence.FileSystem
@@ -22,6 +18,16 @@ namespace ProjectZakynthos.Persistence.FileSystem
                 var items = serializer.Deserialize(file, typeof(PhilatelicItem));                
             }
 
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<PhilatelicItem> GetItems(IEnumerable<CatalogueReference> references)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Save(IEnumerable<PhilatelicItem> items)
+        {
             throw new NotImplementedException();
         }
     }

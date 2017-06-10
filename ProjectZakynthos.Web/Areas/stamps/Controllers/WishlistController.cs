@@ -29,7 +29,7 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 
             if(wishlist == null) { return View(); }
 
-            var items = itemsRepository.GetAll();
+            var items = itemsRepository.GetAll(); //all the data should be in the wishlist, so this will be redundant
 
             var model = Mappers.Convert.ToShowWishlistViewModel(wishlist);
 
@@ -78,7 +78,7 @@ namespace ProjectZakynthos.Web.Areas.stamps.Controllers
 		public ActionResult Manage(ManageWishlistViewModel model)
 		{
             var userIdentity = new Domain.UserIdentity { Id = new Guid(User.Identity.GetUserId()) };
-			var wishlist = Mappers.Convert.ToWishlist(model).TakeRelevant();
+			var wishlist = Mappers.Convert.ToWishlist(model).Purge();
 			
 			repository.SaveWishlist(userIdentity, wishlist);
 
