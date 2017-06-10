@@ -2,6 +2,7 @@
 using ProjectZakynthos.Domain.Philately;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjectZakynthos.Persistence.InMemory
 {
@@ -19,6 +20,8 @@ namespace ProjectZakynthos.Persistence.InMemory
             }
 
             wishlists = new Dictionary<UserIdentity, IEnumerable<Guid>>();
+            var defaultUser = "gianluca@email.com";
+            wishlists.Add(new UserIdentity { Name = defaultUser }, SampleData.SamplePhilatelicItems.Items.Select(item => item.Id));
         }
 
         public static Dictionary<Guid, PhilatelicItem> PhilatelicItems

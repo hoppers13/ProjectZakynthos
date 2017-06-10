@@ -8,9 +8,6 @@ namespace ProjectZakynthos.Persistence.InMemory
 	{
         public IEnumerable<PhilatelicItem> GetAll()
 		{
-            //TODO: add sample datas once, then only use in memory repository 
-            //return SampleData.SamplePhilatelicItems.Items;
-
             return InMemoryDataStore.PhilatelicItems.Values;
 		}
 

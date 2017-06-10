@@ -1,2 +1,4 @@
 collector@email.com : Abced12345!
+gianluca@email.com : asdfgg123!L
+
 dealer@email.com : 12345Abcde!
