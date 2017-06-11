@@ -1,4 +1,6 @@
-﻿ <!-- PAST AUCTIONS -->
+﻿@using ProjectZakynthos.Domain.Philately
+@model PhilatelicItem
+
 <div id="past-auctions">
     <h3>Past Auctions</h3>
     <div>
@@ -21,48 +23,30 @@
                 <h4>Sold at</h4>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3">
-                Ghiglione
+        @foreach (var auction in Model.PastAuctions)
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    @auction.AuctionHouse
+                </div>
+                <div class="col-md-3">
+                    @auction.AuctionDate.Date.ToShortDateString()
+                </div>
+                <div class="col-md-3">
+                    £@auction.StartingBid
+                </div>
+                <div class="col-md-3">
+                    @if (auction.Sold)
+                    {
+                        @auction.Realisation
+                    }
+                    else
+                    {
+                        <span>not sold</span>
+                    }                    
+                </div>
             </div>
-            <div class="col-md-3">
-                03/06/2017
-            </div>
-            <div class="col-md-3">
-                €450
-            </div>
-            <div class="col-md-3">
-                not sold
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                Ferrario
-            </div>
-            <div class="col-md-3">
-                17/05/2017
-            </div>
-            <div class="col-md-3">
-                €250
-            </div>
-            <div class="col-md-3">
-                €280
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                Ghiglione
-            </div>
-            <div class="col-md-3">
-                01/04/2017
-            </div>
-            <div class="col-md-3">
-                €150
-            </div>
-            <div class="col-md-3">
-                €150
-            </div>
-        </div>
+        }        
     </div>
     <div id="past-auctions-graph" class="collapse">
         <canvas id="myChart" width="400" height="60"></canvas>
