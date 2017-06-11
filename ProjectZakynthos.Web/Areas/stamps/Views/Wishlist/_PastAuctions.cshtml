@@ -1,28 +1,43 @@
 ﻿@using ProjectZakynthos.Domain.Philately
+@using Newtonsoft.Json
 @model PhilatelicItem
 
 <div id="past-auctions">
     <h3>Past Auctions</h3>
-    <div>
-        <a data-toggle="collapse" data-target="#past-auctions-tabular" class="pointer">Tabular</a>
-        |
-        <a data-toggle="collapse" data-target="#past-auctions-graph" class="pointer">Graph</a>
-    </div>
-    <div id="past-auctions-tabular" class="collapse in">
-        <div class="row">
-            <div class="col-md-3">
-                <h4>Auction House</h4>
-            </div>
-            <div class="col-md-3">
-                <h4>Date</h4>
-            </div>
-            <div class="col-md-3">
-                <h4>Starting bid</h4>
-            </div>
-            <div class="col-md-3">
-                <h4>Sold at</h4>
-            </div>
+    @if (Model.PastAuctions.Any())
+    {
+        <div>
+            <a data-toggle="collapse" data-target="#past-auctions-tabular" class="pointer">Tabular</a>
+            |
+            <a data-toggle="collapse" data-target="#past-auctions-graph" class="pointer">Graph</a>
         </div>
+    }
+    
+
+    <div id="past-auctions-tabular" class="collapse in">
+        @if (Model.PastAuctions.Any())
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Auction House</h4>
+                </div>
+                <div class="col-md-3">
+                    <h4>Date</h4>
+                </div>
+                <div class="col-md-3">
+                    <h4>Starting bid</h4>
+                </div>
+                <div class="col-md-3">
+                    <h4>Sold at</h4>
+                </div>
+            </div>
+        }
+        
+        @if (!Model.PastAuctions.Any())
+        {
+            <h4 class="red">sorry, no data available from past auctions</h4>
+        }
+
         @foreach (var auction in Model.PastAuctions)
         {
             <div class="row">
