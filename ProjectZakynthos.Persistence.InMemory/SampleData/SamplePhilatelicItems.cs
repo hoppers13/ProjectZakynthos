@@ -1,13 +1,10 @@
 ﻿using ProjectZakynthos.Domain.Philately;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectZakynthos.Persistence.InMemory.SampleData
 {
-	public static class SamplePhilatelicItems
+    public static class SamplePhilatelicItems
 	{
 		public static IEnumerable<PhilatelicItem> Items;
 		
@@ -27,7 +24,7 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
 							Area = "Australia",
 							Number = "231"
 						},
-                    UpcomingAuctions = new List<AuctionedPhilatelicItem>
+                    Auctions = new List<AuctionedPhilatelicItem>
                     {
                         new AuctionedPhilatelicItem
                         {
@@ -62,7 +59,7 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
 							Area = "GB",
 							Number = "197c"
 						},
-                     UpcomingAuctions = new List<AuctionedPhilatelicItem>
+                    Auctions = new List<AuctionedPhilatelicItem>
                     {
                         new AuctionedPhilatelicItem
                         {

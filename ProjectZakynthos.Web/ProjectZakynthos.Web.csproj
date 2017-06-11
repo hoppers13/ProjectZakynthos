@@ -246,6 +246,9 @@
     <Content Include="Areas\stamps\Views\Wishlist\Manage.cshtml" />
     <Content Include="Areas\stamps\Views\Wishlist\EditorTemplates\ManagePhilatelicItemViewModel.cshtml" />
     <Content Include="Areas\stamps\Views\Wishlist\Item.cshtml" />
+    <Content Include="Areas\stamps\Views\Wishlist\_CatalogueValues.cshtml" />
+    <Content Include="Areas\stamps\Views\Wishlist\_UpcomingAuctions.cshtml" />
+    <Content Include="Areas\stamps\Views\Wishlist\_PastAuctions.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

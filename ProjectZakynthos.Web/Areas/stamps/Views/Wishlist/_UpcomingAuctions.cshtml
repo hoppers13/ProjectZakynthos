@@ -1,0 +1,51 @@
+﻿@using ProjectZakynthos.Domain.Philately
+@model PhilatelicItem
+
+<!-- BID FORM-->
+<div id="bid-form" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">[Auction House here]</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row img-circle">
+                    <div class="col-md-10 col-lg-offset-1"> <img title="item image here" src="~/Content/Images/394535.jpg" /></div>
+                </div>
+                <div class="row">
+                    <div id="bid-suggestion" class="col-md-10 col-lg-offset-1">
+                        <p class="suggestion"> Suggested bid: <b>€350</b><br />(criteria: best chance of winning) </p>
+                        <form action="place-bid-with-auction-house">
+                            € <input type="text" />
+                            <input type="submit" class="btn btn-info btn-lg" value="place bid" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="upcoming-auctions">
+    <h3> Upcoming Auctions</h3>
+    @if (Model.UpcomingAuctions == null || !Model.UpcomingAuctions.Any())
+    {
+        <em>This item is not auctioned at the moment</em>
+    }
+    else
+    {
+        foreach (var auction in Model.UpcomingAuctions.OrderBy(x => x.AuctionDate))
+        {
+            <div class="row">
+                <div class="col-md-4">@auction.AuctionDate.Date.ToShortDateString()</div>
+                <div class="col-md-4">@auction.AuctionHouse</div>
+                <div class="col-md-2">£@auction.StartingBid</div>
+                <div class="col-md-2"><a class="red pointer" data-toggle="modal" data-target="#bid-form">bid</a></div>
+            </div>
+        }
+    }
+</div>
