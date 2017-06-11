@@ -66,6 +66,22 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                             AuctionHouse = "Samwells",
                             Sold = true,
                             Realisation = 390
+                        },
+                        new AuctionedPhilatelicItem
+                        {
+                            AuctionDate = DateTime.Now.AddDays(-274),
+                            StartingBid = 430,
+                            AuctionHouse = "Stanley Gibbons",
+                            Sold = true,
+                            Realisation = 415
+                        },
+                        new AuctionedPhilatelicItem
+                        {
+                            AuctionDate = DateTime.Now.AddDays(-377),
+                            StartingBid = 320,
+                            AuctionHouse = "Apex",
+                            Sold = true,
+                            Realisation = 415
                         }
                     }
 				},

@@ -68,10 +68,24 @@
     </div>
 </div>
 
+@{ 
+    var relevantAuctions = Model.PastAuctions.Where(auction => auction.Sold).OrderBy(auction => auction.AuctionDate);
+
+    var graphLabels = relevantAuctions.Select(auction => $"{auction.AuctionHouse} {auction.AuctionDate.ToString("M/yy")}");
+    var graphLabelsJson = JsonConvert.SerializeObject(graphLabels);
+
+    var graphValues = relevantAuctions.Select(auction => auction.Realisation);
+    var graphValuesJson = JsonConvert.SerializeObject(graphValues);
+}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
 <script>
+
+        var gLabels = @Html.Raw(graphLabelsJson);
+        var gValues = @Html.Raw(graphValuesJson);
+
         var data = {
-            labels: ["Vaccari 01/15", "Ghiglione 11/15", "Gartner 05/16", "Ferrario 04/17"],
+            labels: gLabels,
             datasets: [
                 {
                     label: "Auction results",
@@ -92,7 +106,7 @@
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [300, 150, 250, 280],
+                    data: gValues,
                     spanGaps: false,
                 }
             ]
