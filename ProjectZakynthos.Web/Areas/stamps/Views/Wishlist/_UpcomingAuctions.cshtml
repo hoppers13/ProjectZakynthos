@@ -34,7 +34,7 @@
 </div>
 
 @{
-    var lots = Model.PastAuctions.Select(auction => new {
+    var lots = Model.UpcomingAuctions.Select(auction => new {
         id = auction.Id,
         dealer = auction.AuctionHouse,
         lotScan = auction.LotScan,
@@ -46,19 +46,32 @@
 <script>
     var lots = @Html.Raw(lotsJson);
 
-    function selectLot(guid) {
-        var result = lots.filter(function (obj) { return obj.id = guid });
-        alert(JSON.stringify(result,null, 3));
-        app.data = result;
+	function selectLot(guid) {
+		for (var i = 0; i < lots.length; i++) {
+			if (lots[i].id === guid) {
+				var result = lots[i];
+				bidFormData.id = result.id;
+				bidFormData.dealer = result.dealer;
+				bidFormData.lotScan = result.lotScan;
+				bidFormData.lotDescription = result.lotDescription;
+
+				//alert(JSON.stringify(bidFormData, null, 3));
+
+				return;
+			}
+		}        
     }
+
+	var bidFormData = {
+		id: null,
+		dealer: '',
+		lotScan: '',
+		lotDescription: ''
+	}
 
     var app = new Vue({
         el: '#bid-form',
-        data: {
-            dealer: 'Stanley Gibbonbs',
-            lotScan: '/Content/Images/394535.jpg',
-            lotDescription: 'some description here'
-        }
+		data: bidFormData
     })
 </script>
 
