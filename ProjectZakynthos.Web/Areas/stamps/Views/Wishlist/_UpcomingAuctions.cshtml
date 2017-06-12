@@ -8,14 +8,14 @@
         <div class="modal-content">
             <div id="handlebars-placeholder" class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">{{dealer}}</h4>                
+                <h4 class="modal-title">{{dealer}} - <span class="red">£{{startingBid}}</span></h4>                
             </div>
             <div class="modal-body">
-                <div class="row img-circle">
-                    <div class="col-md-10 col-lg-offset-1"> <img title="item image here" :src='lotScan' /></div>
+                <div class="row img-circle">                    
+                    <div class="col-md-10 col-lg-offset-1"> <img id="bid-form-image" title="item image here" :src='lotScan'  /></div>
                 </div>
                 <div class="row">
-                    <div id="bid-suggestion" class="col-md-10 col-lg-offset-1">
+                    <div id="bid-suggestion" class="col-md-10 col-lg-offset-1"> 
                         <p id="lot-description">
                             {{lotDescription}}
                         </p>
@@ -38,7 +38,9 @@
         id = auction.Id,
         dealer = auction.AuctionHouse,
         lotScan = auction.LotScan,
-        lotDescription = auction.LotDescription });
+        lotDescription = auction.LotDescription,
+        startingBid = auction.StartingBid
+    });
     var lotsJson = JsonConvert.SerializeObject(lots);
 }
 
@@ -54,7 +56,7 @@
 				bidFormData.dealer = result.dealer;
 				bidFormData.lotScan = result.lotScan;
 				bidFormData.lotDescription = result.lotDescription;
-
+                bidFormData.startingBid = result.startingBid;    
 				//alert(JSON.stringify(bidFormData, null, 3));
 
 				return;
@@ -66,7 +68,8 @@
 		id: null,
 		dealer: '',
 		lotScan: '',
-		lotDescription: ''
+        lotDescription: '',
+        startingBid: 0
 	}
 
     var app = new Vue({

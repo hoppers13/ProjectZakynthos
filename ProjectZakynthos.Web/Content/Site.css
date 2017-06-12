@@ -28,6 +28,9 @@ textarea {
 .right {
     float: right;
 }
+.left{
+    float: left;
+}
 
 .pointer {
     cursor: pointer;
@@ -81,4 +84,9 @@ span.item-description input {
 
 #catalogue-values {
     margin-top: 2.5em;
+}
+
+#bid-form-image{
+    height: 450px;
+    max-width: 600px;
 }

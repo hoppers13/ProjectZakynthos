@@ -14,15 +14,15 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
 				new PhilatelicItem
 				{
 					Id = new Guid("1c362074-96b0-40ab-8988-c06c0c1f5efc"),
-					Year = 1899,
+					Year = 1919,
 					Type = PhilatelicItemType.Stamp,
-					Description = "2d. deep violet (15.12.99)",
-					Conditions = Conditions.MNH,
+					Description = "(6 Mar.) Wmk Mult Crown CA P.14, 10s. black",
+					Conditions = Conditions.MH,
 					CatalogueReference = 
                         new CatalogueReference{
 							Catalogue = CataloguesInUse.STANLEY_GIBBONS,
-							Area = "Australia",
-							Number = "231"
+							Area = "Malta",
+							Number = "96"
 						},
                     Auctions = new List<AuctionedPhilatelicItem>
                     {
@@ -30,34 +30,34 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(14),
-                            StartingBid = 350,
-                            AuctionHouse = "Spink London",
-                            LotDescription = "2d. deep violet (15.12.99)",
-                            LotScan = "/Content/Images/394535.jpg"
+                            StartingBid = 2300,
+                            AuctionHouse = "Cherrystone Auctions, Inc.",
+                            LotDescription = "1919 10sh black, well centered, h.r., v.f., signed Brun (SG 96) (Catalog value £3,250)",
+                            LotScan = "/Content/Images/MaltaSG96.jpg"
                         },
                         new AuctionedPhilatelicItem
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(24),
-                            StartingBid = 430,
-                            AuctionHouse = "Stanley Gibbons",
-                            LotDescription = "2d. deep violet (15.12.99)",
-                            LotScan = "/Content/Images/394535.jpg"
+                            StartingBid = 2000,
+                            AuctionHouse = "Robert A. Siegel",
+                            LotDescription = "MALTA, 1919, 10sh Black (65; SG 96). Deep shade, well-centered. VERY FINE. A HANDSOME EXAMPLE OF THE KEY STAMP OF MALTA. £3,250",
+                            LotScan = "/Content/Images/MaltaSG96.Siegel.jpg"
                         },
                         new AuctionedPhilatelicItem
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(7),
-                            StartingBid = 330,
-                            AuctionHouse = "Mark Bloxham",
-                            LotDescription = "2d. deep violet (15.12.99)",
-                            LotScan = "/Content/Images/394535.jpg"
+                            StartingBid = 750,
+                            AuctionHouse = "Kelleher Auctions",
+                            LotDescription = "Malta, 1919, St. Paul, 10s black (Scott 65), Multiple Crown CA watermark, o.g., lightly hinged, exceptionally fresh and clean, Fine to Very Fine, signed F.B. Turpin, London. SG 96; L3,250 ($5,040). Scott $3,500. Estimate $1,500 - 2,000 AN OUTSTANDING EXAMPLE OF THE RARE 10S ST. PAUL WITH MULTIPLE CA WATERMARK",
+                            LotScan = "/Content/Images/MaltaSG96.Kelleher.jpg"
                         },
                         new AuctionedPhilatelicItem
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-14),
-                            StartingBid = 450,
+                            StartingBid = 3450,
                             AuctionHouse = "Brandon stamps",
                             Sold = false
                         },
@@ -65,52 +65,52 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-124),
-                            StartingBid = 430,
+                            StartingBid = 2430,
                             AuctionHouse = "Stanley Gibbons",
                             Sold = true,
-                            Realisation = 475
+                            Realisation = 2875
                         },
                         new AuctionedPhilatelicItem
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-77),
-                            StartingBid = 320,
+                            StartingBid = 3200,
                             AuctionHouse = "Samwells",
                             Sold = true,
-                            Realisation = 390
+                            Realisation = 3390
                         },
                         new AuctionedPhilatelicItem
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-274),
-                            StartingBid = 430,
+                            StartingBid = 2430,
                             AuctionHouse = "Stanley Gibbons",
                             Sold = true,
-                            Realisation = 415
+                            Realisation = 2550
                         },
                         new AuctionedPhilatelicItem
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-377),
-                            StartingBid = 320,
+                            StartingBid = 3200,
                             AuctionHouse = "Apex",
                             Sold = true,
-                            Realisation = 415
+                            Realisation = 3415
                         }
                     }
 				},
 				new PhilatelicItem
 				{
 					Id = new Guid("7d22998b-c393-46e5-bda3-ef828e890b0b"),
-					Year = 1883,
+					Year = 1886,
 					Type = PhilatelicItemType.Stamp,
-					Description = "1/2 d. vermillion Doubly printed",
+					Description = "Victoria 5Sh red, wmk CC inverted",
 					Conditions = Conditions.NoGum,
 					CatalogueReference = 
 						new CatalogueReference{
 							Catalogue = CataloguesInUse.STANLEY_GIBBONS,
-							Area = "GB",
-							Number = "197c"
+							Area = "Malta",
+							Number = "30w"
 						},
                     Auctions = new List<AuctionedPhilatelicItem>
                     {
@@ -118,10 +118,10 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                         {
                             Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(21),
-                            StartingBid = 1350,
-                            AuctionHouse = "Apex Auctions",
-                            LotDescription = "1/2 d. vermillion Doubly printed",
-                            LotScan = "/Content/Images/394535.jpg"
+                            StartingBid = 112,
+                            AuctionHouse = "Burda Auction s.r.o.",
+                            LotDescription = "1886 SG.30w, Victoria 5Sh red, wmk CC INVERTED; cat. £160",
+                            LotScan = "/Content/Images/MaltaSG30w.jpg"
                         }
                     }
                 },
