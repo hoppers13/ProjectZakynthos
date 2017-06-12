@@ -1,21 +1,24 @@
 ﻿@using ProjectZakynthos.Domain.Philately
+@using Newtonsoft.Json
 @model PhilatelicItem
 
 <!-- BID FORM-->
 <div id="bid-form" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div id="handlebars-placeholder" class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">[Auction House here]</h4>
+                <h4 class="modal-title">{{dealer}}</h4>                
             </div>
             <div class="modal-body">
                 <div class="row img-circle">
-                    <div class="col-md-10 col-lg-offset-1"> <img title="item image here" src="~/Content/Images/394535.jpg" /></div>
+                    <div class="col-md-10 col-lg-offset-1"> <img title="item image here" :src='lotScan' /></div>
                 </div>
                 <div class="row">
                     <div id="bid-suggestion" class="col-md-10 col-lg-offset-1">
-                        <p class="suggestion"> Suggested bid: <b>€350</b><br />(criteria: best chance of winning) </p>
+                        <p id="lot-description">
+                            {{lotDescription}}
+                        </p>
                         <form action="place-bid-with-auction-house">
                             € <input type="text" />
                             <input type="submit" class="btn btn-info btn-lg" value="place bid" />
@@ -29,6 +32,35 @@
         </div>
     </div>
 </div>
+
+@{
+    var lots = Model.PastAuctions.Select(auction => new {
+        id = auction.Id,
+        dealer = auction.AuctionHouse,
+        lotScan = auction.LotScan,
+        lotDescription = auction.LotDescription });
+    var lotsJson = JsonConvert.SerializeObject(lots);
+}
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var lots = @Html.Raw(lotsJson);
+
+    function selectLot(guid) {
+        var result = lots.filter(function (obj) { return obj.id = guid });
+        alert(JSON.stringify(result,null, 3));
+        app.data = result;
+    }
+
+    var app = new Vue({
+        el: '#bid-form',
+        data: {
+            dealer: 'Stanley Gibbonbs',
+            lotScan: '/Content/Images/394535.jpg',
+            lotDescription: 'some description here'
+        }
+    })
+</script>
 
 <div id="upcoming-auctions">
     <h3> Upcoming Auctions</h3>
@@ -44,8 +76,9 @@
                 <div class="col-md-4">@auction.AuctionDate.Date.ToShortDateString()</div>
                 <div class="col-md-4">@auction.AuctionHouse</div>
                 <div class="col-md-2">£@auction.StartingBid</div>
-                <div class="col-md-2"><a class="red pointer" data-toggle="modal" data-target="#bid-form">bid</a></div>
+                <div class="col-md-2"><a class="red pointer" data-toggle="modal" data-target="#bid-form" onclick="selectLot('@auction.Id')">bid</a></div>
             </div>
         }
     }
 </div>
+

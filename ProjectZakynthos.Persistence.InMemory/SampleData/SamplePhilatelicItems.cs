@@ -28,24 +28,34 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                     {
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(14),
                             StartingBid = 350,
-                            AuctionHouse = "Spink London"                            
+                            AuctionHouse = "Spink London",
+                            LotDescription = "2d. deep violet (15.12.99)",
+                            LotScan = "/Content/Images/394535.jpg"
                         },
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(24),
                             StartingBid = 430,
-                            AuctionHouse = "Stanley Gibbons"
+                            AuctionHouse = "Stanley Gibbons",
+                            LotDescription = "2d. deep violet (15.12.99)",
+                            LotScan = "/Content/Images/394535.jpg"
                         },
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(7),
                             StartingBid = 330,
-                            AuctionHouse = "Mark Bloxham"
+                            AuctionHouse = "Mark Bloxham",
+                            LotDescription = "2d. deep violet (15.12.99)",
+                            LotScan = "/Content/Images/394535.jpg"
                         },
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-14),
                             StartingBid = 450,
                             AuctionHouse = "Brandon stamps",
@@ -53,6 +63,7 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                         },
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-124),
                             StartingBid = 430,
                             AuctionHouse = "Stanley Gibbons",
@@ -61,6 +72,7 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                         },
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-77),
                             StartingBid = 320,
                             AuctionHouse = "Samwells",
@@ -69,6 +81,7 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                         },
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-274),
                             StartingBid = 430,
                             AuctionHouse = "Stanley Gibbons",
@@ -77,6 +90,7 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                         },
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(-377),
                             StartingBid = 320,
                             AuctionHouse = "Apex",
@@ -102,9 +116,12 @@ namespace ProjectZakynthos.Persistence.InMemory.SampleData
                     {
                         new AuctionedPhilatelicItem
                         {
+                            Id = Guid.NewGuid(),
                             AuctionDate = DateTime.Now.AddDays(21),
                             StartingBid = 1350,
-                            AuctionHouse = "Apex Auctions"
+                            AuctionHouse = "Apex Auctions",
+                            LotDescription = "1/2 d. vermillion Doubly printed",
+                            LotScan = "/Content/Images/394535.jpg"
                         }
                     }
                 },
